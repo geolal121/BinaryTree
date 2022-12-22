@@ -10,7 +10,6 @@
 #include <algorithm>
 
 BinaryTree::BinaryTree() {
-
 }
 BinaryTree::BinaryTree(int value, int x, int y) {
 	SetRoot(value, x, y);
@@ -139,7 +138,7 @@ int BinaryTree::TotalCount(Node* ptr) {
 void BinaryTree::PreOrder(Node* ptr) {
 	if (ptr == nullptr)
 		return;
-	std::cout << ptr->getValue() << " ";
+	std::cout << "|" << ptr->getValue() << "| ";
 	PreOrder(ptr->left);
 	PreOrder(ptr->right);
 }
@@ -147,7 +146,7 @@ void BinaryTree::InOrder(Node* ptr) {
 	if (ptr == nullptr)
 		return;
 	InOrder(ptr->left);
-	std::cout << ptr->getValue() << " ";
+	std::cout << "|" << ptr->getValue() << "| ";
 	InOrder(ptr->right);
 }
 void BinaryTree::PostOrder(Node* ptr) {
@@ -155,7 +154,7 @@ void BinaryTree::PostOrder(Node* ptr) {
 		return;
 	PostOrder(ptr->left);
 	PostOrder(ptr->right);
-	std::cout << ptr->getValue() << " ";
+	std::cout << "|" << ptr->getValue() << "| ";
 }
 void BinaryTree::PrintAt(Node* ptr, int xParent, int yParent) {
 	std::string stringValue = std::to_string(ptr->getValue());
@@ -205,13 +204,9 @@ void BinaryTree::Print() {
 	setColor(4);
 	std::cout << "\n\nCount Of Parent Nodes: |" << TotalParentCount(rootOfTree) << "|" << " -> Values: "; TotalParentString(rootOfTree);
 	setColor(6);
-	std::cout << "\n\nCount Of Leaf Nodes:   |" << TotalLeafCount(rootOfTree) << "|" << " -> Values: "; TotalLeafString(rootOfTree);
+	std::cout << "\nCount Of Leaf Nodes:   |" << TotalLeafCount(rootOfTree) << "|" << " -> Values: "; TotalLeafString(rootOfTree);
 
-<<<<<<< HEAD
-	C.setColor(5);
-=======
 	setColor(5);
->>>>>>> 8cb55af (Third Commit)
 	std::cout << "\n\nPre-Order:  ";
 	PreOrder(rootOfTree);
 	setColor(3);
@@ -241,7 +236,7 @@ void BinaryTree::Print() {
 		std::cout << "\n\nThe Tree Is Neither Full, Complete, Nor Perfect." << std::endl;
 	}
 
-	gotoxy(90, 28);
+	gotoxy(90, 0);
 	setColor(31);
 	std::cout << " Created By: *Geo Hernandez* ";
 }

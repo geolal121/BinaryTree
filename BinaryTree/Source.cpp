@@ -6,7 +6,7 @@
 void main() {
 	BinaryTree B;
 
-	B.SetRoot(20, 58, 10);
+	B.SetRoot(20, 55, 13);
 
 	// Right
 	B.InsertNodes(30);
@@ -16,9 +16,9 @@ void main() {
 	B.InsertNodes(40); // Comment To Check If Only Complete Or This To Check If Perfect
 
 	// Left
-	B.InsertNodes(10);
+	B.InsertNodes(12);
 	B.InsertNodes(15);
-	B.InsertNodes(5);
+	B.InsertNodes(10);
 
 	B.Print();
 
