@@ -108,7 +108,7 @@ int BinaryTree::TotalParentCount(Node* ptr) {
 void BinaryTree::TotalParentString(Node* ptr) {
 	if (ptr == nullptr)
 		return;
-	if (ptr->left != nullptr && ptr->right != nullptr)
+	if (ptr->left || ptr->right)
 		std::cout << " |" << ptr->getValue() << "|";
 	TotalParentString(ptr->left);
 	TotalParentString(ptr->right);
@@ -227,10 +227,10 @@ void BinaryTree::Print() {
 		std::cout << "\n\nTree Is: |Full|";
 	}
 	else if (IsComplete(rootOfTree)) {
-		std::cout << "\n\n|Tree Is: |Complete|";
+		std::cout << "\n\nTree Is: |Complete|";
 	}
 	else if (IsPerfect(rootOfTree)) {
-		std::cout << "\n\n|Tree Is: |Perfect|";
+		std::cout << "\n\nTree Is: |Perfect|";
 	}
 	else {
 		std::cout << "\n\nThe Tree Is Neither Full, Complete, Nor Perfect." << std::endl;
